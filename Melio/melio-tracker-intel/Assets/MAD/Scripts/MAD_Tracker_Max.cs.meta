@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 43013061d7ad5984fb6d740218a3ddbb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - MAD_Avatar: {instanceID: 0}
+  - MAD_Target: {instanceID: 0}
+  - PrevizRoot: {instanceID: 0}
+  - skeletalJoint: {instanceID: 0}
+  - MAD_Animator: {instanceID: 0}
+  - MAD_Squat_Start: {instanceID: 0}
+  - MAD_Squat_Stop: {instanceID: 0}
+  - targetHipBone: {instanceID: 0}
+  - userHipBone: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

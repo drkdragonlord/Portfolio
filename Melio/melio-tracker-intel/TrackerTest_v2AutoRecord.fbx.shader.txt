@@ -1,0 +1,841 @@
+ShaderCount,24
+MAD_spine2
+{
+	MaterialCount,1
+	MaterialName,MelioGreen (Instance)
+	ShaderName,Standard
+	{
+		Color,_Color,0.1129405,0.8867924,0.8209146,1
+		TexEnv,_MainTex,
+		Range,_Cutoff,0.5
+		Range,_Glossiness,0.824
+		Range,_GlossMapScale,1
+		Float,_SmoothnessTextureChannel,0
+		Range,_Metallic,0.493
+		TexEnv,_MetallicGlossMap,
+		Float,_SpecularHighlights,1
+		Float,_GlossyReflections,1
+		Float,_BumpScale,1
+		TexEnv,_BumpMap,
+		Range,_Parallax,0.02
+		TexEnv,_ParallaxMap,
+		Range,_OcclusionStrength,1
+		TexEnv,_OcclusionMap,
+		Color,_EmissionColor,0.09558559,0.1132075,0.1102705,1
+		TexEnv,_EmissionMap,
+		TexEnv,_DetailMask,
+		TexEnv,_DetailAlbedoMap,
+		Float,_DetailNormalMapScale,1
+		TexEnv,_DetailNormalMap,
+		Float,_UVSec,0
+		Float,_Mode,0
+		Float,_SrcBlend,1
+		Float,_DstBlend,0
+		Float,_ZWrite,1
+	}
+}
+MAD_spine1
+{
+	MaterialCount,1
+	MaterialName,MelioGreen (Instance)
+	ShaderName,Standard
+	{
+		Color,_Color,0.1129405,0.8867924,0.8209146,1
+		TexEnv,_MainTex,
+		Range,_Cutoff,0.5
+		Range,_Glossiness,0.824
+		Range,_GlossMapScale,1
+		Float,_SmoothnessTextureChannel,0
+		Range,_Metallic,0.493
+		TexEnv,_MetallicGlossMap,
+		Float,_SpecularHighlights,1
+		Float,_GlossyReflections,1
+		Float,_BumpScale,1
+		TexEnv,_BumpMap,
+		Range,_Parallax,0.02
+		TexEnv,_ParallaxMap,
+		Range,_OcclusionStrength,1
+		TexEnv,_OcclusionMap,
+		Color,_EmissionColor,0.09558559,0.1132075,0.1102705,1
+		TexEnv,_EmissionMap,
+		TexEnv,_DetailMask,
+		TexEnv,_DetailAlbedoMap,
+		Float,_DetailNormalMapScale,1
+		TexEnv,_DetailNormalMap,
+		Float,_UVSec,0
+		Float,_Mode,0
+		Float,_SrcBlend,1
+		Float,_DstBlend,0
+		Float,_ZWrite,1
+	}
+}
+MAD_spine
+{
+	MaterialCount,1
+	MaterialName,MelioGreen (Instance)
+	ShaderName,Standard
+	{
+		Color,_Color,0.1129405,0.8867924,0.8209146,1
+		TexEnv,_MainTex,
+		Range,_Cutoff,0.5
+		Range,_Glossiness,0.824
+		Range,_GlossMapScale,1
+		Float,_SmoothnessTextureChannel,0
+		Range,_Metallic,0.493
+		TexEnv,_MetallicGlossMap,
+		Float,_SpecularHighlights,1
+		Float,_GlossyReflections,1
+		Float,_BumpScale,1
+		TexEnv,_BumpMap,
+		Range,_Parallax,0.02
+		TexEnv,_ParallaxMap,
+		Range,_OcclusionStrength,1
+		TexEnv,_OcclusionMap,
+		Color,_EmissionColor,0.09558559,0.1132075,0.1102705,1
+		TexEnv,_EmissionMap,
+		TexEnv,_DetailMask,
+		TexEnv,_DetailAlbedoMap,
+		Float,_DetailNormalMapScale,1
+		TexEnv,_DetailNormalMap,
+		Float,_UVSec,0
+		Float,_Mode,0
+		Float,_SrcBlend,1
+		Float,_DstBlend,0
+		Float,_ZWrite,1
+	}
+}
+MAD_hips
+{
+	MaterialCount,1
+	MaterialName,MelioGreen (Instance)
+	ShaderName,Standard
+	{
+		Color,_Color,0.1129405,0.8867924,0.8209146,1
+		TexEnv,_MainTex,
+		Range,_Cutoff,0.5
+		Range,_Glossiness,0.824
+		Range,_GlossMapScale,1
+		Float,_SmoothnessTextureChannel,0
+		Range,_Metallic,0.493
+		TexEnv,_MetallicGlossMap,
+		Float,_SpecularHighlights,1
+		Float,_GlossyReflections,1
+		Float,_BumpScale,1
+		TexEnv,_BumpMap,
+		Range,_Parallax,0.02
+		TexEnv,_ParallaxMap,
+		Range,_OcclusionStrength,1
+		TexEnv,_OcclusionMap,
+		Color,_EmissionColor,0.09558559,0.1132075,0.1102705,1
+		TexEnv,_EmissionMap,
+		TexEnv,_DetailMask,
+		TexEnv,_DetailAlbedoMap,
+		Float,_DetailNormalMapScale,1
+		TexEnv,_DetailNormalMap,
+		Float,_UVSec,0
+		Float,_Mode,0
+		Float,_SrcBlend,1
+		Float,_DstBlend,0
+		Float,_ZWrite,1
+	}
+}
+MAD_leftEarJoint
+{
+	MaterialCount,1
+	MaterialName,MelioGreen (Instance)
+	ShaderName,Standard
+	{
+		Color,_Color,0.1129405,0.8867924,0.8209146,1
+		TexEnv,_MainTex,
+		Range,_Cutoff,0.5
+		Range,_Glossiness,0.824
+		Range,_GlossMapScale,1
+		Float,_SmoothnessTextureChannel,0
+		Range,_Metallic,0.493
+		TexEnv,_MetallicGlossMap,
+		Float,_SpecularHighlights,1
+		Float,_GlossyReflections,1
+		Float,_BumpScale,1
+		TexEnv,_BumpMap,
+		Range,_Parallax,0.02
+		TexEnv,_ParallaxMap,
+		Range,_OcclusionStrength,1
+		TexEnv,_OcclusionMap,
+		Color,_EmissionColor,0.09558559,0.1132075,0.1102705,1
+		TexEnv,_EmissionMap,
+		TexEnv,_DetailMask,
+		TexEnv,_DetailAlbedoMap,
+		Float,_DetailNormalMapScale,1
+		TexEnv,_DetailNormalMap,
+		Float,_UVSec,0
+		Float,_Mode,0
+		Float,_SrcBlend,1
+		Float,_DstBlend,0
+		Float,_ZWrite,1
+	}
+}
+MAD_rightEarJoint
+{
+	MaterialCount,1
+	MaterialName,MelioGreen (Instance)
+	ShaderName,Standard
+	{
+		Color,_Color,0.1129405,0.8867924,0.8209146,1
+		TexEnv,_MainTex,
+		Range,_Cutoff,0.5
+		Range,_Glossiness,0.824
+		Range,_GlossMapScale,1
+		Float,_SmoothnessTextureChannel,0
+		Range,_Metallic,0.493
+		TexEnv,_MetallicGlossMap,
+		Float,_SpecularHighlights,1
+		Float,_GlossyReflections,1
+		Float,_BumpScale,1
+		TexEnv,_BumpMap,
+		Range,_Parallax,0.02
+		TexEnv,_ParallaxMap,
+		Range,_OcclusionStrength,1
+		TexEnv,_OcclusionMap,
+		Color,_EmissionColor,0.09558559,0.1132075,0.1102705,1
+		TexEnv,_EmissionMap,
+		TexEnv,_DetailMask,
+		TexEnv,_DetailAlbedoMap,
+		Float,_DetailNormalMapScale,1
+		TexEnv,_DetailNormalMap,
+		Float,_UVSec,0
+		Float,_Mode,0
+		Float,_SrcBlend,1
+		Float,_DstBlend,0
+		Float,_ZWrite,1
+	}
+}
+MAD_leftEyeJoint
+{
+	MaterialCount,1
+	MaterialName,MelioGreen (Instance)
+	ShaderName,Standard
+	{
+		Color,_Color,0.1129405,0.8867924,0.8209146,1
+		TexEnv,_MainTex,
+		Range,_Cutoff,0.5
+		Range,_Glossiness,0.824
+		Range,_GlossMapScale,1
+		Float,_SmoothnessTextureChannel,0
+		Range,_Metallic,0.493
+		TexEnv,_MetallicGlossMap,
+		Float,_SpecularHighlights,1
+		Float,_GlossyReflections,1
+		Float,_BumpScale,1
+		TexEnv,_BumpMap,
+		Range,_Parallax,0.02
+		TexEnv,_ParallaxMap,
+		Range,_OcclusionStrength,1
+		TexEnv,_OcclusionMap,
+		Color,_EmissionColor,0.09558559,0.1132075,0.1102705,1
+		TexEnv,_EmissionMap,
+		TexEnv,_DetailMask,
+		TexEnv,_DetailAlbedoMap,
+		Float,_DetailNormalMapScale,1
+		TexEnv,_DetailNormalMap,
+		Float,_UVSec,0
+		Float,_Mode,0
+		Float,_SrcBlend,1
+		Float,_DstBlend,0
+		Float,_ZWrite,1
+	}
+}
+MAD_rightEyeJoint
+{
+	MaterialCount,1
+	MaterialName,MelioGreen (Instance)
+	ShaderName,Standard
+	{
+		Color,_Color,0.1129405,0.8867924,0.8209146,1
+		TexEnv,_MainTex,
+		Range,_Cutoff,0.5
+		Range,_Glossiness,0.824
+		Range,_GlossMapScale,1
+		Float,_SmoothnessTextureChannel,0
+		Range,_Metallic,0.493
+		TexEnv,_MetallicGlossMap,
+		Float,_SpecularHighlights,1
+		Float,_GlossyReflections,1
+		Float,_BumpScale,1
+		TexEnv,_BumpMap,
+		Range,_Parallax,0.02
+		TexEnv,_ParallaxMap,
+		Range,_OcclusionStrength,1
+		TexEnv,_OcclusionMap,
+		Color,_EmissionColor,0.09558559,0.1132075,0.1102705,1
+		TexEnv,_EmissionMap,
+		TexEnv,_DetailMask,
+		TexEnv,_DetailAlbedoMap,
+		Float,_DetailNormalMapScale,1
+		TexEnv,_DetailNormalMap,
+		Float,_UVSec,0
+		Float,_Mode,0
+		Float,_SrcBlend,1
+		Float,_DstBlend,0
+		Float,_ZWrite,1
+	}
+}
+MAD_leftAnkleJoint
+{
+	MaterialCount,1
+	MaterialName,MelioGreen (Instance)
+	ShaderName,Standard
+	{
+		Color,_Color,0.1129405,0.8867924,0.8209146,1
+		TexEnv,_MainTex,
+		Range,_Cutoff,0.5
+		Range,_Glossiness,0.824
+		Range,_GlossMapScale,1
+		Float,_SmoothnessTextureChannel,0
+		Range,_Metallic,0.493
+		TexEnv,_MetallicGlossMap,
+		Float,_SpecularHighlights,1
+		Float,_GlossyReflections,1
+		Float,_BumpScale,1
+		TexEnv,_BumpMap,
+		Range,_Parallax,0.02
+		TexEnv,_ParallaxMap,
+		Range,_OcclusionStrength,1
+		TexEnv,_OcclusionMap,
+		Color,_EmissionColor,0.09558559,0.1132075,0.1102705,1
+		TexEnv,_EmissionMap,
+		TexEnv,_DetailMask,
+		TexEnv,_DetailAlbedoMap,
+		Float,_DetailNormalMapScale,1
+		TexEnv,_DetailNormalMap,
+		Float,_UVSec,0
+		Float,_Mode,0
+		Float,_SrcBlend,1
+		Float,_DstBlend,0
+		Float,_ZWrite,1
+	}
+}
+MAD_leftKneeJoint
+{
+	MaterialCount,1
+	MaterialName,MelioGreen (Instance)
+	ShaderName,Standard
+	{
+		Color,_Color,0.1129405,0.8867924,0.8209146,1
+		TexEnv,_MainTex,
+		Range,_Cutoff,0.5
+		Range,_Glossiness,0.824
+		Range,_GlossMapScale,1
+		Float,_SmoothnessTextureChannel,0
+		Range,_Metallic,0.493
+		TexEnv,_MetallicGlossMap,
+		Float,_SpecularHighlights,1
+		Float,_GlossyReflections,1
+		Float,_BumpScale,1
+		TexEnv,_BumpMap,
+		Range,_Parallax,0.02
+		TexEnv,_ParallaxMap,
+		Range,_OcclusionStrength,1
+		TexEnv,_OcclusionMap,
+		Color,_EmissionColor,0.09558559,0.1132075,0.1102705,1
+		TexEnv,_EmissionMap,
+		TexEnv,_DetailMask,
+		TexEnv,_DetailAlbedoMap,
+		Float,_DetailNormalMapScale,1
+		TexEnv,_DetailNormalMap,
+		Float,_UVSec,0
+		Float,_Mode,0
+		Float,_SrcBlend,1
+		Float,_DstBlend,0
+		Float,_ZWrite,1
+	}
+}
+MAD_leftThighJoint
+{
+	MaterialCount,1
+	MaterialName,MelioGreen (Instance)
+	ShaderName,Standard
+	{
+		Color,_Color,0.1129405,0.8867924,0.8209146,1
+		TexEnv,_MainTex,
+		Range,_Cutoff,0.5
+		Range,_Glossiness,0.824
+		Range,_GlossMapScale,1
+		Float,_SmoothnessTextureChannel,0
+		Range,_Metallic,0.493
+		TexEnv,_MetallicGlossMap,
+		Float,_SpecularHighlights,1
+		Float,_GlossyReflections,1
+		Float,_BumpScale,1
+		TexEnv,_BumpMap,
+		Range,_Parallax,0.02
+		TexEnv,_ParallaxMap,
+		Range,_OcclusionStrength,1
+		TexEnv,_OcclusionMap,
+		Color,_EmissionColor,0.09558559,0.1132075,0.1102705,1
+		TexEnv,_EmissionMap,
+		TexEnv,_DetailMask,
+		TexEnv,_DetailAlbedoMap,
+		Float,_DetailNormalMapScale,1
+		TexEnv,_DetailNormalMap,
+		Float,_UVSec,0
+		Float,_Mode,0
+		Float,_SrcBlend,1
+		Float,_DstBlend,0
+		Float,_ZWrite,1
+	}
+}
+MAD_rightAnkleJoint
+{
+	MaterialCount,1
+	MaterialName,MelioGreen (Instance)
+	ShaderName,Standard
+	{
+		Color,_Color,0.1129405,0.8867924,0.8209146,1
+		TexEnv,_MainTex,
+		Range,_Cutoff,0.5
+		Range,_Glossiness,0.824
+		Range,_GlossMapScale,1
+		Float,_SmoothnessTextureChannel,0
+		Range,_Metallic,0.493
+		TexEnv,_MetallicGlossMap,
+		Float,_SpecularHighlights,1
+		Float,_GlossyReflections,1
+		Float,_BumpScale,1
+		TexEnv,_BumpMap,
+		Range,_Parallax,0.02
+		TexEnv,_ParallaxMap,
+		Range,_OcclusionStrength,1
+		TexEnv,_OcclusionMap,
+		Color,_EmissionColor,0.09558559,0.1132075,0.1102705,1
+		TexEnv,_EmissionMap,
+		TexEnv,_DetailMask,
+		TexEnv,_DetailAlbedoMap,
+		Float,_DetailNormalMapScale,1
+		TexEnv,_DetailNormalMap,
+		Float,_UVSec,0
+		Float,_Mode,0
+		Float,_SrcBlend,1
+		Float,_DstBlend,0
+		Float,_ZWrite,1
+	}
+}
+MAD_rightKneeJoint
+{
+	MaterialCount,1
+	MaterialName,MelioGreen (Instance)
+	ShaderName,Standard
+	{
+		Color,_Color,0.1129405,0.8867924,0.8209146,1
+		TexEnv,_MainTex,
+		Range,_Cutoff,0.5
+		Range,_Glossiness,0.824
+		Range,_GlossMapScale,1
+		Float,_SmoothnessTextureChannel,0
+		Range,_Metallic,0.493
+		TexEnv,_MetallicGlossMap,
+		Float,_SpecularHighlights,1
+		Float,_GlossyReflections,1
+		Float,_BumpScale,1
+		TexEnv,_BumpMap,
+		Range,_Parallax,0.02
+		TexEnv,_ParallaxMap,
+		Range,_OcclusionStrength,1
+		TexEnv,_OcclusionMap,
+		Color,_EmissionColor,0.09558559,0.1132075,0.1102705,1
+		TexEnv,_EmissionMap,
+		TexEnv,_DetailMask,
+		TexEnv,_DetailAlbedoMap,
+		Float,_DetailNormalMapScale,1
+		TexEnv,_DetailNormalMap,
+		Float,_UVSec,0
+		Float,_Mode,0
+		Float,_SrcBlend,1
+		Float,_DstBlend,0
+		Float,_ZWrite,1
+	}
+}
+MAD_rightThighJoint
+{
+	MaterialCount,1
+	MaterialName,MelioGreen (Instance)
+	ShaderName,Standard
+	{
+		Color,_Color,0.1129405,0.8867924,0.8209146,1
+		TexEnv,_MainTex,
+		Range,_Cutoff,0.5
+		Range,_Glossiness,0.824
+		Range,_GlossMapScale,1
+		Float,_SmoothnessTextureChannel,0
+		Range,_Metallic,0.493
+		TexEnv,_MetallicGlossMap,
+		Float,_SpecularHighlights,1
+		Float,_GlossyReflections,1
+		Float,_BumpScale,1
+		TexEnv,_BumpMap,
+		Range,_Parallax,0.02
+		TexEnv,_ParallaxMap,
+		Range,_OcclusionStrength,1
+		TexEnv,_OcclusionMap,
+		Color,_EmissionColor,0.09558559,0.1132075,0.1102705,1
+		TexEnv,_EmissionMap,
+		TexEnv,_DetailMask,
+		TexEnv,_DetailAlbedoMap,
+		Float,_DetailNormalMapScale,1
+		TexEnv,_DetailNormalMap,
+		Float,_UVSec,0
+		Float,_Mode,0
+		Float,_SrcBlend,1
+		Float,_DstBlend,0
+		Float,_ZWrite,1
+	}
+}
+MAD_leftWristJoint
+{
+	MaterialCount,1
+	MaterialName,MelioGreen (Instance)
+	ShaderName,Standard
+	{
+		Color,_Color,0.1129405,0.8867924,0.8209146,1
+		TexEnv,_MainTex,
+		Range,_Cutoff,0.5
+		Range,_Glossiness,0.824
+		Range,_GlossMapScale,1
+		Float,_SmoothnessTextureChannel,0
+		Range,_Metallic,0.493
+		TexEnv,_MetallicGlossMap,
+		Float,_SpecularHighlights,1
+		Float,_GlossyReflections,1
+		Float,_BumpScale,1
+		TexEnv,_BumpMap,
+		Range,_Parallax,0.02
+		TexEnv,_ParallaxMap,
+		Range,_OcclusionStrength,1
+		TexEnv,_OcclusionMap,
+		Color,_EmissionColor,0.09558559,0.1132075,0.1102705,1
+		TexEnv,_EmissionMap,
+		TexEnv,_DetailMask,
+		TexEnv,_DetailAlbedoMap,
+		Float,_DetailNormalMapScale,1
+		TexEnv,_DetailNormalMap,
+		Float,_UVSec,0
+		Float,_Mode,0
+		Float,_SrcBlend,1
+		Float,_DstBlend,0
+		Float,_ZWrite,1
+	}
+}
+MAD_leftElbowJoint
+{
+	MaterialCount,1
+	MaterialName,MelioGreen (Instance)
+	ShaderName,Standard
+	{
+		Color,_Color,0.1129405,0.8867924,0.8209146,1
+		TexEnv,_MainTex,
+		Range,_Cutoff,0.5
+		Range,_Glossiness,0.824
+		Range,_GlossMapScale,1
+		Float,_SmoothnessTextureChannel,0
+		Range,_Metallic,0.493
+		TexEnv,_MetallicGlossMap,
+		Float,_SpecularHighlights,1
+		Float,_GlossyReflections,1
+		Float,_BumpScale,1
+		TexEnv,_BumpMap,
+		Range,_Parallax,0.02
+		TexEnv,_ParallaxMap,
+		Range,_OcclusionStrength,1
+		TexEnv,_OcclusionMap,
+		Color,_EmissionColor,0.09558559,0.1132075,0.1102705,1
+		TexEnv,_EmissionMap,
+		TexEnv,_DetailMask,
+		TexEnv,_DetailAlbedoMap,
+		Float,_DetailNormalMapScale,1
+		TexEnv,_DetailNormalMap,
+		Float,_UVSec,0
+		Float,_Mode,0
+		Float,_SrcBlend,1
+		Float,_DstBlend,0
+		Float,_ZWrite,1
+	}
+}
+MAD_leftShoulderJoint
+{
+	MaterialCount,1
+	MaterialName,MelioGreen (Instance)
+	ShaderName,Standard
+	{
+		Color,_Color,0.1129405,0.8867924,0.8209146,1
+		TexEnv,_MainTex,
+		Range,_Cutoff,0.5
+		Range,_Glossiness,0.824
+		Range,_GlossMapScale,1
+		Float,_SmoothnessTextureChannel,0
+		Range,_Metallic,0.493
+		TexEnv,_MetallicGlossMap,
+		Float,_SpecularHighlights,1
+		Float,_GlossyReflections,1
+		Float,_BumpScale,1
+		TexEnv,_BumpMap,
+		Range,_Parallax,0.02
+		TexEnv,_ParallaxMap,
+		Range,_OcclusionStrength,1
+		TexEnv,_OcclusionMap,
+		Color,_EmissionColor,0.09558559,0.1132075,0.1102705,1
+		TexEnv,_EmissionMap,
+		TexEnv,_DetailMask,
+		TexEnv,_DetailAlbedoMap,
+		Float,_DetailNormalMapScale,1
+		TexEnv,_DetailNormalMap,
+		Float,_UVSec,0
+		Float,_Mode,0
+		Float,_SrcBlend,1
+		Float,_DstBlend,0
+		Float,_ZWrite,1
+	}
+}
+MAD_rightWristJoint
+{
+	MaterialCount,1
+	MaterialName,MelioGreen (Instance)
+	ShaderName,Standard
+	{
+		Color,_Color,0.1129405,0.8867924,0.8209146,1
+		TexEnv,_MainTex,
+		Range,_Cutoff,0.5
+		Range,_Glossiness,0.824
+		Range,_GlossMapScale,1
+		Float,_SmoothnessTextureChannel,0
+		Range,_Metallic,0.493
+		TexEnv,_MetallicGlossMap,
+		Float,_SpecularHighlights,1
+		Float,_GlossyReflections,1
+		Float,_BumpScale,1
+		TexEnv,_BumpMap,
+		Range,_Parallax,0.02
+		TexEnv,_ParallaxMap,
+		Range,_OcclusionStrength,1
+		TexEnv,_OcclusionMap,
+		Color,_EmissionColor,0.09558559,0.1132075,0.1102705,1
+		TexEnv,_EmissionMap,
+		TexEnv,_DetailMask,
+		TexEnv,_DetailAlbedoMap,
+		Float,_DetailNormalMapScale,1
+		TexEnv,_DetailNormalMap,
+		Float,_UVSec,0
+		Float,_Mode,0
+		Float,_SrcBlend,1
+		Float,_DstBlend,0
+		Float,_ZWrite,1
+	}
+}
+MAD_rightElbowJoint
+{
+	MaterialCount,1
+	MaterialName,MelioGreen (Instance)
+	ShaderName,Standard
+	{
+		Color,_Color,0.1129405,0.8867924,0.8209146,1
+		TexEnv,_MainTex,
+		Range,_Cutoff,0.5
+		Range,_Glossiness,0.824
+		Range,_GlossMapScale,1
+		Float,_SmoothnessTextureChannel,0
+		Range,_Metallic,0.493
+		TexEnv,_MetallicGlossMap,
+		Float,_SpecularHighlights,1
+		Float,_GlossyReflections,1
+		Float,_BumpScale,1
+		TexEnv,_BumpMap,
+		Range,_Parallax,0.02
+		TexEnv,_ParallaxMap,
+		Range,_OcclusionStrength,1
+		TexEnv,_OcclusionMap,
+		Color,_EmissionColor,0.09558559,0.1132075,0.1102705,1
+		TexEnv,_EmissionMap,
+		TexEnv,_DetailMask,
+		TexEnv,_DetailAlbedoMap,
+		Float,_DetailNormalMapScale,1
+		TexEnv,_DetailNormalMap,
+		Float,_UVSec,0
+		Float,_Mode,0
+		Float,_SrcBlend,1
+		Float,_DstBlend,0
+		Float,_ZWrite,1
+	}
+}
+MAD_rightShoulderJoint
+{
+	MaterialCount,1
+	MaterialName,MelioGreen (Instance)
+	ShaderName,Standard
+	{
+		Color,_Color,0.1129405,0.8867924,0.8209146,1
+		TexEnv,_MainTex,
+		Range,_Cutoff,0.5
+		Range,_Glossiness,0.824
+		Range,_GlossMapScale,1
+		Float,_SmoothnessTextureChannel,0
+		Range,_Metallic,0.493
+		TexEnv,_MetallicGlossMap,
+		Float,_SpecularHighlights,1
+		Float,_GlossyReflections,1
+		Float,_BumpScale,1
+		TexEnv,_BumpMap,
+		Range,_Parallax,0.02
+		TexEnv,_ParallaxMap,
+		Range,_OcclusionStrength,1
+		TexEnv,_OcclusionMap,
+		Color,_EmissionColor,0.09558559,0.1132075,0.1102705,1
+		TexEnv,_EmissionMap,
+		TexEnv,_DetailMask,
+		TexEnv,_DetailAlbedoMap,
+		Float,_DetailNormalMapScale,1
+		TexEnv,_DetailNormalMap,
+		Float,_UVSec,0
+		Float,_Mode,0
+		Float,_SrcBlend,1
+		Float,_DstBlend,0
+		Float,_ZWrite,1
+	}
+}
+MAD_neckJoint
+{
+	MaterialCount,1
+	MaterialName,MelioGreen (Instance)
+	ShaderName,Standard
+	{
+		Color,_Color,0.1129405,0.8867924,0.8209146,1
+		TexEnv,_MainTex,
+		Range,_Cutoff,0.5
+		Range,_Glossiness,0.824
+		Range,_GlossMapScale,1
+		Float,_SmoothnessTextureChannel,0
+		Range,_Metallic,0.493
+		TexEnv,_MetallicGlossMap,
+		Float,_SpecularHighlights,1
+		Float,_GlossyReflections,1
+		Float,_BumpScale,1
+		TexEnv,_BumpMap,
+		Range,_Parallax,0.02
+		TexEnv,_ParallaxMap,
+		Range,_OcclusionStrength,1
+		TexEnv,_OcclusionMap,
+		Color,_EmissionColor,0.09558559,0.1132075,0.1102705,1
+		TexEnv,_EmissionMap,
+		TexEnv,_DetailMask,
+		TexEnv,_DetailAlbedoMap,
+		Float,_DetailNormalMapScale,1
+		TexEnv,_DetailNormalMap,
+		Float,_UVSec,0
+		Float,_Mode,0
+		Float,_SrcBlend,1
+		Float,_DstBlend,0
+		Float,_ZWrite,1
+	}
+}
+MAD_noseJoint
+{
+	MaterialCount,1
+	MaterialName,MelioGreen (Instance)
+	ShaderName,Standard
+	{
+		Color,_Color,0.1129405,0.8867924,0.8209146,1
+		TexEnv,_MainTex,
+		Range,_Cutoff,0.5
+		Range,_Glossiness,0.824
+		Range,_GlossMapScale,1
+		Float,_SmoothnessTextureChannel,0
+		Range,_Metallic,0.493
+		TexEnv,_MetallicGlossMap,
+		Float,_SpecularHighlights,1
+		Float,_GlossyReflections,1
+		Float,_BumpScale,1
+		TexEnv,_BumpMap,
+		Range,_Parallax,0.02
+		TexEnv,_ParallaxMap,
+		Range,_OcclusionStrength,1
+		TexEnv,_OcclusionMap,
+		Color,_EmissionColor,0.09558559,0.1132075,0.1102705,1
+		TexEnv,_EmissionMap,
+		TexEnv,_DetailMask,
+		TexEnv,_DetailAlbedoMap,
+		Float,_DetailNormalMapScale,1
+		TexEnv,_DetailNormalMap,
+		Float,_UVSec,0
+		Float,_Mode,0
+		Float,_SrcBlend,1
+		Float,_DstBlend,0
+		Float,_ZWrite,1
+	}
+}
+Beta_Joints
+{
+	MaterialCount,1
+	MaterialName,AvatarJoints_Mat (Instance)
+	ShaderName,Standard
+	{
+		Color,_Color,1,1,1,1
+		TexEnv,_MainTex,OutputTextures/TrackerTest_v2.fbm/xbot_softened_Joints_MAT_Diffuse
+		Range,_Cutoff,0.5
+		Range,_Glossiness,0.5
+		Range,_GlossMapScale,0.89
+		Float,_SmoothnessTextureChannel,0
+		Range,_Metallic,0
+		TexEnv,_MetallicGlossMap,OutputTextures/TrackerTest_v2.fbm/xbot_softened_Joints_MAT_Glossiness
+		Float,_SpecularHighlights,1
+		Float,_GlossyReflections,1
+		Float,_BumpScale,1
+		TexEnv,_BumpMap,OutputTextures/TrackerTest_v2.fbm/xbot_softened_Joints_MAT_Normal
+		Range,_Parallax,0.02
+		TexEnv,_ParallaxMap,OutputTextures/TrackerTest_v2.fbm/xbot_softened_Joints_MAT_Height
+		Range,_OcclusionStrength,1
+		TexEnv,_OcclusionMap,
+		Color,_EmissionColor,0,0,0,1
+		TexEnv,_EmissionMap,
+		TexEnv,_DetailMask,
+		TexEnv,_DetailAlbedoMap,
+		Float,_DetailNormalMapScale,1
+		TexEnv,_DetailNormalMap,
+		Float,_UVSec,0
+		Float,_Mode,0
+		Float,_SrcBlend,1
+		Float,_DstBlend,0
+		Float,_ZWrite,1
+	}
+}
+Beta_Surface
+{
+	MaterialCount,1
+	MaterialName,AvatarMesh_Mat (Instance)
+	ShaderName,Standard
+	{
+		Color,_Color,1,1,1,1
+		TexEnv,_MainTex,OutputTextures/TrackerTest_v2.fbm/xbot_softened_body_MAT_Diffuse
+		Range,_Cutoff,0.5
+		Range,_Glossiness,0.5
+		Range,_GlossMapScale,0.91
+		Float,_SmoothnessTextureChannel,0
+		Range,_Metallic,0
+		TexEnv,_MetallicGlossMap,OutputTextures/TrackerTest_v2.fbm/xbot_softened_body_MAT_Glossiness
+		Float,_SpecularHighlights,1
+		Float,_GlossyReflections,1
+		Float,_BumpScale,1
+		TexEnv,_BumpMap,OutputTextures/TrackerTest_v2.fbm/xbot_softened_body_MAT_Normal
+		Range,_Parallax,0.02
+		TexEnv,_ParallaxMap,OutputTextures/TrackerTest_v2.fbm/xbot_softened_body_MAT_Height
+		Range,_OcclusionStrength,1
+		TexEnv,_OcclusionMap,
+		Color,_EmissionColor,1,1,1,1
+		TexEnv,_EmissionMap,OutputTextures/TrackerTest_v2.fbm/xbot_softened_body_MAT_Emissive
+		TexEnv,_DetailMask,
+		TexEnv,_DetailAlbedoMap,
+		Float,_DetailNormalMapScale,1
+		TexEnv,_DetailNormalMap,
+		Float,_UVSec,0
+		Float,_Mode,0
+		Float,_SrcBlend,1
+		Float,_DstBlend,0
+		Float,_ZWrite,1
+	}
+}
