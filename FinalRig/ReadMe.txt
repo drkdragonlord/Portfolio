@@ -1,0 +1,1 @@
+Final Rig is an automated rigging solution for Maya environment. It was maintained and owned by Radiant Square, SYNQ Studios, and Jaibana Studios. They retain the rights to the tools and is showcased here to demonstrate my skills in the project at the time of release.
