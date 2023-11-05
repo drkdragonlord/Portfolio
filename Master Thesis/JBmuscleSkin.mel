@@ -1,0 +1,183 @@
+global proc JBmuscleSkin ()
+{
+
+if (`window -ex JBGuiWin`)
+	deleteUI JBGuiWin;
+	
+if (`windowPref -ex JBGuiWin`)
+	windowPref -e -w 300 -h 545 JBGuiWin;
+	
+window -w 300 -h 545 -bgc 0.39 0.39 0.39 -mb 1 -tb 1 -t "JBmuscleSkin UI" JBGuiWin;
+		menu -l "file" -aob 1 fileMenu;
+			menuItem -l "new" fileNew; 
+			menuItem -l "import" fileImport;
+			menuItem -l "export" fileExport;
+			menuItem -l "close" fileClose;
+		menu -l "edit" -aob 1 -to 1 editMenu;
+			menuItem -l "Cache Mesh" editCache;
+			menuItem -l "Transfer Weights" editTrnWgt;
+
+columnLayout -w 295 -h 545 -adj 1 -bgc 0.39 0.39 0.39 worldColumn;
+	shelfTabLayout -bgc 0.39 0.39 0.39 frTabLO;
+	//frameLayout -bv 1 -cl 1 -cll 1 -w 290 -bgc 0.39 0.39 0.39 -bs "etchedIn" -l "Final Rig"	frFrame;
+			columnLayout -bgc 0.7 0.7 0.7 "Final Rig";
+				formLayout -bgc 0.7 0.7 0.7 frFormL;
+					optionMenu -w 180 -l "Character" frGuideOptM;
+						menuItem -l "Character List..." frGuideList;
+				setParent frFormL;
+					button -w 60 -l "Refresh" frRefBtn;
+					picture -i "C:\Documents and Settings\Dark Dragonlord\My Documents\maya\8.5\scripts\Thesis\CharImage.jpg" frImage;
+					
+				formLayout -e 
+				
+					-af frGuideOptM "top" 2
+					-af frGuideOptM "left" 35
+					
+					-af frRefBtn "top" 3
+					-af frRefBtn "left" 195
+					
+					-af frImage "top" 10
+					-af frImage "left" 0
+					
+				frFormL;
+				
+	setParent frTabLO;
+//	frameLayout -bv 1 -cl 0 -cll 1 -w 290 -bgc 0.39 0.39 0.39 -bs "etchedIn" -l "Create Muscle"	mscFrame;
+		columnLayout -bgc 0.7 0.7 0.7 "Create Muscle";
+			formLayout -bgc 0.7 0.7 0.7 mscFormL;
+				optionMenu mscOpt;
+					menuItem -l "Flexors (Cylindrical Flex)";
+					menuItem -l "Extensors (Cylindrical Twist)";
+					menuItem -l "Flat (Chest and Gluteous)";
+					menuItem -l "Rhomboid (Trapezius)";
+					menuItem -l "Triangular (Latisimus and Back)";
+					menuItem -l "Whole Muscle Setup";
+				setParent mscFormL;
+				text -l "Muscle Type" mscTxt;
+				checkBox -l "Use Specific Joints" mscCheck;
+				textFieldButtonGrp -cw 1 100  -cw 2 60 -tx "" -ed 0 -bl "Base Joint" mscTFBG01;
+				textFieldButtonGrp -cw 1 100  -cw 2 60 -tx "" -ed 0 -bl "End Joint" mscTFBG02;
+				button -l "Create" mscBtn;
+				floatSliderGrp -cat 1 left 0 -cat 2 left 15 -cw 1 30 -cw 2 70 -min 1 -v 1 -l "Scale" -field true mscScalesSld;
+
+			formLayout -e 
+				
+				-af mscOpt "top" 5
+				-af mscOpt "left" 15
+				
+				-af mscTxt "top" 8
+				-af mscTxt "left" 207
+
+				-af mscCheck "top" 35
+				-af mscCheck "left" 85	
+				
+				-af mscTFBG01 "top" 55
+				-af mscTFBG01 "left" 60	
+				
+				-af mscTFBG02 "top" 82
+				-af mscTFBG02 "left" 60	
+
+				-af mscBtn "top" 140
+				-af mscBtn "left" 120		
+				
+				-af mscScalesSld "top" 110
+				-af mscScalesSld "left" 10						
+			
+			mscFormL;
+			
+	setParent frTabLO;
+//	frameLayout -bv 1 -cl 1 -cll 1 -w 290 -bgc 0.39 0.39 0.39 -bs "etchedIn" -l "Muscle Attributes" mscAttr;
+		columnLayout -bgc 0.7 0.7 0.7 "Muscle Attributes";
+			formLayout -bgc 0.7 0.7 0.7 mscAttrForm;
+				
+				optionMenu -l "Active Muscle" mscAttrOpt;
+					menuItem -l "Select Muscle from Drop Down";
+				setParent mscAttrForm;
+				button -l "R" mscRefBtn;
+				floatSliderButtonGrp -cat 1 left 0 -cat 2 left 10 -cw 1 30 -cw 2 70 -min -1 -max 3 -l "Jiggle" -field true  -bl "P" mscJigSld;
+//				button -l "P" mscJigPnt;
+			
+				floatSliderButtonGrp -cat 1 left 0 -cat 2 left 10 -cw 1 30 -cw 2 70 -min -1 -max 3 -l "Slide" -field true  -bl "P" mscSlideSld;
+//				button -l "P" mscSlidePnt;		
+						
+				floatSliderGrp -cat 1 left 0 -cat 2 left 15 -cw 1 30 -cw 2 70 -min -5 -max 10 -l "Twist %" -field true mscTwSld;
+				
+				floatSliderGrp -cat 1 left 0 -cat 2 left 15 -cw 1 30 -cw 2 70 -min -5 -max 10 -l "Flex %" -field true mscFlxSld;
+
+				
+			formLayout -e
+			
+			  -af mscAttrOpt "top" 5
+			  -af mscAttrOpt "left" 5
+			  
+			  -af mscRefBtn "top" 6
+			  -af mscRefBtn "left" 257			  
+			  
+				-af mscJigSld "top" 32
+				-af mscJigSld "left" 5
+				
+//				-af mscJigPnt "top" 33
+//				-af mscJigPnt "left" 267
+				
+				-af mscSlideSld "top" 57
+				-af mscSlideSld "left" 5
+				
+//				-af mscSlidePnt "top" 58
+//				-af mscSlidePnt "left" 267
+
+				-af mscTwSld"top" 82
+				-af mscTwSld "left" 5
+
+				-af mscFlxSld "top" 108
+				-af mscFlxSld "left" 5
+			
+			mscAttrForm;	
+			
+	setParent frTabLO;
+//	frameLayout -bv 1 -cl 1 -cll 1 -w 290 -bgc 0.39 0.39 0.39 -bs "etchedIn" -l "Muscle Edit" mscEdit;
+		columnLayout -bgc 0.7 0.7 0.7 "Muscle Edit";
+			formLayout -bgc 0.7 0.7 0.7 mscEditForm;
+			
+				button -w 90 -l "Detach" mscDt;
+				button -w 90 -l "Cache Mesh" mscCh;
+				button -w 90 -l "Transfer Weights" mscTrnWgt;
+				button -w 90 -l "Export" mscExp;
+				button -w 90 -l "Import" mscImp;
+				button -w 90 -l "Delete" mscDel;
+				button -w 90 -l "Close" mscClose;
+				text -l "JBmuscleSkin. Version 1.0. Juan Borrero 2007" mscInfo;
+			
+			formLayout -e
+			
+			  -af mscDt "top" 5
+			  -af mscDt "left" 3
+
+			  -af mscCh "top" 5
+			  -af mscCh "left" 98
+			  
+			  -af mscTrnWgt "top" 5
+			  -af mscTrnWgt "left" 193				  
+
+			  -af mscExp "top" 35
+			  -af mscExp "left" 3
+
+			  -af mscImp "top" 35
+			  -af mscImp "left" 98			  			
+
+			  -af mscDel "top" 35
+			  -af mscDel "left" 193
+	
+			  -af mscClose "top" 70
+			  -af mscClose "left" 98
+			  
+			  -af mscInfo "top" 105
+			  -af mscInfo "left" 30
+	  			  			
+			mscEditForm;
+			
+showWindow JBGuiWin;
+		
+	
+	
+	
+	}

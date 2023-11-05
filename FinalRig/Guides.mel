@@ -1,0 +1,55 @@
+// ***************************************************************
+// ***************************************************************
+// Module Settings
+// ***************************************************************
+// ***************************************************************	
+global proc string[] GuidesOptions()
+{
+
+	string $modOptions[30];
+	int $i;
+			
+	$i=0; $modOptions[$i] = "GUIDES"; 					//Module Name		
+	$i++; $modOptions[$i] = "1.0"; 							//Module Version																	
+	$i++; $modOptions[$i] = "1"; 								//Tab position																	
+	$i++; $modOptions[$i] = "RadiantSquare"; 		//Created by											
+	
+	return $modOptions;
+
+}
+
+
+// ***************************************************************
+// ***************************************************************
+// Execute the main procedures.
+// ***************************************************************
+// ***************************************************************	
+global proc Guides()
+{
+	//Sources Start***********************************************************************************
+	RS_SourceFinalRig -t 5;
+	RS_SourceFinalRig -t 6;
+	//Sources End*************************************************************************************
+	
+	// execute the UI
+	FR_GuidesUI;
+
+}
+
+
+// ***************************************************************
+// ***************************************************************
+// Finds the absolute path to the script.
+// ***************************************************************
+// ***************************************************************		
+global proc string RS_GuidesPath()
+{	
+	string $whatIs=`whatIs RS_GuidesPath`;
+	string $fullPath=`substring $whatIs 25 500`;
+	string $buffer[];
+	int $numTok=`tokenize $fullPath "/" $buffer`;
+	int $numLetters=size($fullPath);
+	int $numLettersLastFolder=size($buffer[$numTok-1]);
+	string $location=(`substring $fullPath 1 ($numLetters-$numLettersLastFolder)`);
+	return $location;
+}//end of RS_GuidesPath

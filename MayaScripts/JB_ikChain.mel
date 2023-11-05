@@ -1,0 +1,113 @@
+global proc JB_ikChain()
+
+{
+	select -hi;
+	string $selectedObjects[] = `ls -sl`;
+	int $i=1;
+	int $jointCount = `size($selectedObjects)`;
+	for ($object in $selectedObjects)
+	{
+		if($i<$jointCount)
+		{
+			//Querries the start joint of the chain and the elbow/knee joint for placement and setup purposes further in the script
+			float $startJointPos[] = `xform -q -ws -t $selectedObjects[0]`;
+			float $midJointPos[] = `xform -q -ws -t $selectedObjects[1]`;
+			
+			
+			//Sets the preffered angle for the knee/elbow joints
+			if($i==2){
+				if($midJointPos[0]>$startJointPos[0] )
+				{
+					setAttr ($selectedObjects[1]+".preferredAngleX") -45;
+				}
+				else if($midJointPos[0]<$startJointPos[0] )
+				{
+					setAttr ($selectedObjects[1]+".preferredAngleX") -45;
+				}
+				else if($midJointPos[1]<$startJointPos[1])
+				{
+					setAttr ($selectedObjects[1]+".preferredAngleX") 45;
+				}
+				
+			}
+			if($i==3)
+			{
+				//Sets up the Wrist/Ankle Circle Controls
+				string $control[]  = `circle -c 0 0 0 -nr 0 1 0 -sw 360 -r 1 -d 3 -ut 0 -tol 0.01 -s 8 -ch 0 -n ($object+"Ctrl")`;
+				string $empGrp = `group -empty -n ($object+"Ctrl_GF")`; 
+				parent $control[0] $empGrp;
+
+				//Set up an empty group to parent Ik Handles to later in the script
+				string $ikEmpGrp = `group -empty -n ($object+"Ik_GF")`; 
+
+				//Sets up the locators to be used as Pole Vector Controls
+				string $pvCtrl[] = `spaceLocator -p 0 0 0 -n ($selectedObjects[0]+"PoleVector_Ctrl")`;
+				string$empPVGrp = `group -empty -n ($selectedObjects[0]+"PoleVector_Ctrl_GF")`; 
+				parent $pvCtrl[0] $empPVGrp;
+				
+				//Checks the position of joints to determine the position of the Pole Vector Controls in relation to character placement. This section is for arms.
+				if(($midJointPos[0]>$startJointPos[0] ) || ($midJointPos[0]<$startJointPos[0] )){
+					delete `pointConstraint $object  $empGrp`;
+					delete `orientConstraint $object  $empGrp`;
+					delete `pointConstraint $object  $ikEmpGrp`;
+					delete `orientConstraint $object  $ikEmpGrp`;
+
+					//Set the position of the Pole Vector in 3D space
+					delete `pointConstraint $selectedObjects[0]  $empPVGrp`;
+					float $currentPos = `getAttr ($empPVGrp+".tz")`;
+					setAttr ($empPVGrp+".tz") ($currentPos-5);
+
+					//Constraint the Ik's Empty Groups to the control for animation
+					pointConstraint -o 0 0 0 -w 1 $control[0] $ikEmpGrp;
+					orientConstraint -o 0 0 0 -w 1 $control[0] $ikEmpGrp;
+					//Sets up the IK Handles
+					string $ikGroup[] = `ikHandle -n ($control[0]+"_arm_IkHandle") -sj $selectedObjects[0] -ee $selectedObjects[2]`;
+					string $ikGroup02[] = `ikHandle -n ($control[0]+"_hand_IkHandle") -sol ikSCsolver -sj $selectedObjects[2] -ee $selectedObjects[3]`;
+
+					//parent $ikGroup02[0] $ikGroup[0];
+					parent $ikGroup02[0] $ikGroup[0] $ikEmpGrp;
+					poleVectorConstraint -w 1 $pvCtrl[0] $ikGroup[0] ;
+
+					//Clean Ik Visibility
+					setAttr ($ikGroup[0]+".v") 0;
+					setAttr ($ikGroup02[0]+".v") 0;
+				}
+				//Checks the position of joints to determine the position of the Pole Vector Controls in relation to character placement. This section is for legs.
+				else
+				{
+					delete `pointConstraint $object  $empGrp`;
+					delete `orientConstraint -mo $object  $empGrp`;
+					delete `pointConstraint $object  $ikEmpGrp`;
+					delete `orientConstraint $object  $ikEmpGrp`;
+
+					//Set the position of the Pole Vector in 3D space
+					delete `pointConstraint $selectedObjects[0]  $empPVGrp`;
+					float $currentPos = `getAttr ($empPVGrp+".tz")`;
+					//print $currentPos;
+					setAttr ($empPVGrp+".tz") ($currentPos+5);
+					//setAttr ($empPVGrp+".tz") 5;
+
+					//Constraint the Ik's Empty Groups to the control for animation
+					pointConstraint -o 0 0 0 -w 1 $control[0] $ikEmpGrp;
+					orientConstraint -o 0 0 0 -w 1 $control[0] $ikEmpGrp;
+					//Sets up the IK Handles
+					string $ikGroup[] = `ikHandle -n ($control[0]+"_leg_IkHandle") -sj $selectedObjects[0] -ee $selectedObjects[2]`;
+					string $ikGroup02[] = `ikHandle -n ($control[0]+"_toe_IkHandle") -sol ikSCsolver -sj $selectedObjects[2] -ee $selectedObjects[3]`;
+
+					//parent $ikGroup02[0] $ikGroup[0];
+					parent $ikGroup02[0] $ikGroup[0] $ikEmpGrp;
+					poleVectorConstraint -w 1 $pvCtrl[0] $ikGroup[0] ;
+
+					//Clean Ik Visibility
+					setAttr ($ikGroup[0]+".v") 0;
+					setAttr ($ikGroup02[0]+".v") 0;
+				}
+
+			}
+			
+			$i++;
+
+		}
+	}
+
+}

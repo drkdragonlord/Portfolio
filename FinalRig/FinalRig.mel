@@ -1,0 +1,66 @@
+global proc FinalRig(){
+	
+		string $pluginLoaded = `RS_loadFinalRigPlugin`;
+	
+		// check if the plugin is loaded
+		if ($pluginLoaded == "NO")
+		{
+			print "Final Rig couldn't be loaded!!!\n";
+			return;
+		}
+		else{
+			string $source1 = ("RS_SourceFinalRig -t 1");
+			string $source2 = ("RS_SourceFinalRig -t 2");
+			string $source3 = ("RS_SourceFinalRig -t 3");
+			string $source4 = ("RS_SourceFinalRig -t 4");
+			eval ($source1);
+			eval ($source2);
+			eval ($source3);
+			eval ($source4);
+			
+			RS_FinalRigUI;
+		}
+	
+}
+
+// ***************************************************************
+// ***************************************************************
+// Finds the absolute path to the Final Rig scripts.
+// ***************************************************************
+// ***************************************************************		
+global proc string RS_FinalRigPath()
+{	
+	string $whatIs=`whatIs RS_FinalRigPath`;
+	string $fullPath=`substring $whatIs 25 500`;
+	string $buffer[];
+	int $numTok=`tokenize $fullPath "/" $buffer`;
+	int $numLetters=size($fullPath);
+	int $numLettersLastFolder=size($buffer[$numTok-1]);
+	string $iconsLocation=(`substring $fullPath 1 ($numLetters-$numLettersLastFolder)`);
+	return $iconsLocation;
+	
+}//end of RS_FinalRigPath
+
+// ***************************************************************
+// ***************************************************************
+// Load Final Rig
+// ***************************************************************
+// ***************************************************************
+global proc string RS_loadFinalRigPlugin ()
+{
+	string $plugName = "RS_FinalRig.mll";
+	string $Plugloaded = "NO";
+        
+	if (`pluginInfo -q -loaded "RS_FinalRig.mll"`)
+	{
+		$Plugloaded = "YES";
+	}
+	else
+	{
+		loadPlugin($plugName);
+		$Plugloaded = "YES";
+	}
+	
+	return $Plugloaded;
+	
+}

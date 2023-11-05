@@ -1,0 +1,17 @@
+global proc BRfkCtrl(){
+
+
+	string $jointis[50]=`ls -sl -type "joint"`;
+
+
+	for($joint in $jointis)
+
+	{
+  		circle -n ("dummyCircle"+$joint);
+		
+		parent -s -add ("dummyCircle"+$joint+"Shape") $joint;
+		delete ("dummyCircle"+$joint);
+
+	}
+
+}

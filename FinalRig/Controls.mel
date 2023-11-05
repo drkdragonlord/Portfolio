@@ -1,0 +1,56 @@
+// ***************************************************************
+// ***************************************************************
+// Module Settings
+// ***************************************************************
+// ***************************************************************	
+global proc string[] ControlsOptions()
+{
+
+	string $modOptions[30];
+	int $i;
+			
+	$i=0; $modOptions[$i] = "CONTROLS"; 				//Module Name	
+	$i++; $modOptions[$i] = "1.0"; 							//Module Version																	
+	$i++; $modOptions[$i] = "3"; 								//Tab order																	
+	$i++; $modOptions[$i] = "RadiantSquare"; 		//Created by
+	$i++; $modOptions[$i] = "FR_CtrlsUI"; 			//Main UI Procedure												
+	
+	return $modOptions;
+
+}
+
+
+// ***************************************************************
+// ***************************************************************
+// Execute the main procedure.
+// ***************************************************************
+// ***************************************************************	
+global proc Controls()
+{
+	//Sources Start***********************************************************************************
+	RS_SourceFinalRig -t 9;
+	RS_SourceFinalRig -t 10;
+	//Sources End*************************************************************************************
+	
+	// execute the UI
+	FR_CtrlsUI;
+
+}
+
+
+// ***************************************************************
+// ***************************************************************
+// Finds the absolute path to the script.
+// ***************************************************************
+// ***************************************************************		
+global proc string RS_CtrlsPath()
+{	
+	string $whatIs=`whatIs RS_CtrlsPath`;
+	string $fullPath=`substring $whatIs 25 500`;
+	string $buffer[];
+	int $numTok=`tokenize $fullPath "/" $buffer`;
+	int $numLetters=size($fullPath);
+	int $numLettersLastFolder=size($buffer[$numTok-1]);
+	string $location=(`substring $fullPath 1 ($numLetters-$numLettersLastFolder)`);
+	return $location;
+}//end of RS_CtrlsPath

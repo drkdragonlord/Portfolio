@@ -1,0 +1,19 @@
+﻿cl : Command line warning D9025: overriding '/Gm-' with '/Gm'
+cl : Command line warning D9035: option 'GX' has been deprecated and will be removed in a future release
+cl : Command line warning D9036: use 'EHsc' instead of 'GX'
+cl : Command line warning D9025: overriding '/Zi' with '/ZI'
+cl : Command line warning D9035: option 'GZ' has been deprecated and will be removed in a future release
+cl : Command line warning D9036: use 'RTC1' instead of 'GZ'
+cl : Command line warning D9002: ignoring unknown option '/YX'
+  pluginMain.cpp
+i:\masters\thesis\my code\jbmuscleskin\jbmuscleskin\locator.h(10): warning C4005: 'NT_PLUGIN' : macro redefinition
+          command-line arguments :  see previous definition of 'NT_PLUGIN'
+  Locator.cpp
+i:\masters\thesis\my code\jbmuscleskin\jbmuscleskin\locator.h(10): warning C4005: 'NT_PLUGIN' : macro redefinition
+          command-line arguments :  see previous definition of 'NT_PLUGIN'
+  Generating Code...
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(I:\MASTERS\Thesis\My Code\jbMuscleSkin\jbMuscleSkin\Debug\jbMuscleSkin.dll) does not match the Linker's OutputFile property value (I:\MASTERS\Thesis\My Code\jbMuscleSkin\jbMuscleSkin\Debug\jbMuscleCage.mll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(991,5): warning MSB8012: TargetExt(.dll) does not match the Linker's OutputFile property value (.mll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(992,5): warning MSB8012: TargetName(jbMuscleSkin) does not match the Linker's OutputFile property value (jbMuscleCage). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+LINK : warning LNK4224: /INCREMENTAL:YES is no longer supported;  ignored
+OpenMaya.lib(OpenMaya.dll) : fatal error LNK1112: module machine type 'x64' conflicts with target machine type 'X86'

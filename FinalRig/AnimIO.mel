@@ -1,0 +1,91 @@
+// ***************************************************************
+// ***************************************************************
+// Module Settings
+// ***************************************************************
+// ***************************************************************	
+global proc string[] AnimIOOptions()
+{
+
+	string $modOptions[30];
+	int $i;
+			
+	$i=0; $modOptions[$i] = "ANIMIO"; 				//Module Name		
+	$i++; $modOptions[$i] = "1.0"; 							//Module Version																	
+	$i++; $modOptions[$i] = "1"; 								//Tab position																	
+	$i++; $modOptions[$i] = "RadiantSquare"; 		//Created by											
+	
+	return $modOptions;
+
+}
+
+
+// ***************************************************************
+// ***************************************************************
+// Execute the main procedures.
+// ***************************************************************
+// ***************************************************************
+global proc AnimIO()
+{	
+			
+	//Sources Start***********************************************************************************
+	string $pluginLoaded = `RS_loadAnimIOPlugin`;	
+	
+	// check if the plugin is loaded
+	if ($pluginLoaded == "NO")
+	{
+		print "AnimIO couldn't be loaded!!!\n";
+		return;
+	}
+	else{
+		//Sources Start***********************************************************************************
+		string $source1 = ("RS_SourceAnimIO -t 1");
+		string $source2 = ("RS_SourceAnimIO -t 2");
+		eval ($source1);
+		eval ($source2);
+	}
+	//Sources End*************************************************************************************
+	
+	// execute the UI
+	FR_AnimIOUI();
+	
+}//end of AnimIO
+
+// ***************************************************************
+// ***************************************************************
+// Finds the absolute path to the AnimIO script.
+// ***************************************************************
+// ***************************************************************		
+global proc string RS_AnimIOPath()
+{	
+	string $whatIs=`whatIs RS_AnimIOPath`;
+	string $fullPath=`substring $whatIs 25 500`;
+	string $buffer[];
+	int $numTok=`tokenize $fullPath "/" $buffer`;
+	int $numLetters=size($fullPath);
+	int $numLettersLastFolder=size($buffer[$numTok-1]);
+	string $location=(`substring $fullPath 1 ($numLetters-$numLettersLastFolder)`);
+	return $location;
+}//end of RS_AnimIOPath
+
+// ***************************************************************
+// ***************************************************************
+// Load AnimIO
+// ***************************************************************
+// ***************************************************************
+global proc string RS_loadAnimIOPlugin ()
+{
+	string $Plugloaded = "NO";	
+	
+	if (`pluginInfo -q -loaded "RS_AnimIO.mll"`)
+	{
+		$Plugloaded = "YES";
+	}
+	else
+	{
+		loadPlugin("RS_AnimIO.mll");
+		$Plugloaded = "YES";
+	}
+	
+	return $Plugloaded;
+	
+}
