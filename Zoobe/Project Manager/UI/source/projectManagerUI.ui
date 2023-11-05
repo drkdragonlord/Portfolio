@@ -1,0 +1,1733 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <author>J.Borrero</author>
+ <class>qtWinUI</class>
+ <widget class="QMainWindow" name="qtWinUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Zoobe Project Manager</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="userLabel">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>8</y>
+      <width>75</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>User Name:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="userListBox">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>5</y>
+      <width>200</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>200</width>
+      <height>22</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="projectLabel">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>33</y>
+      <width>75</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Project Name:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="projectListBox">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>30</y>
+      <width>150</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>150</width>
+      <height>22</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="projectSettingsBtn">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>285</x>
+      <y>5</y>
+      <width>110</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <weight>50</weight>
+      <bold>false</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="text">
+     <string>Project Manager...</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="projectPathLabel">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>60</y>
+      <width>75</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Project Path:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="projectPathTxtBox">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>55</y>
+      <width>315</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QFrame" name="logoFrame">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>80</y>
+      <width>390</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="contentTab">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>170</y>
+      <width>390</width>
+      <height>430</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="currentOpenTab">
+     <attribute name="title">
+      <string>Currently Open</string>
+     </attribute>
+     <widget class="QLabel" name="currentlyOpenLabel">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>5</y>
+        <width>100</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>CURRENTLY OPEN:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="openSelectionLabel">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>20</y>
+        <width>370</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>none</string>
+      </property>
+     </widget>
+     <widget class="QScrollArea" name="currentlyOpen_historyScrollArea">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>90</y>
+        <width>200</width>
+        <height>90</height>
+       </rect>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>196</width>
+         <height>86</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="Line" name="currentlyOpenDiv">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>390</width>
+        <height>3</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelVersion">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>40</y>
+        <width>380</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 170, 127);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="actionsLabel">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>70</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Actions</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="currentlyOpen_historyLabel">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>70</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>History</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="currentlyOpen_previewLabel">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>190</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Preview</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="currentlyOpen_notesLabel">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>190</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Notes</string>
+      </property>
+     </widget>
+     <widget class="QScrollArea" name="currentlyOpen_notesScrollArea">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>205</y>
+        <width>200</width>
+        <height>125</height>
+       </rect>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>196</width>
+         <height>121</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="saveWSBtn">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>155</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 170, 0);
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Save Workshop...</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saveMasterBtn">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>120</y>
+        <width>155</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 170, 0);
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Save Master...</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="reviveBtn">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>150</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(85, 170, 255);
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Revive...</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="closeWSBtn">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>150</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(214, 214, 214);
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Close</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="currentlyOpen_previewFrame">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>205</y>
+        <width>150</width>
+        <height>104</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="currentlyOpen_locationLabel">
+      <property name="geometry">
+       <rect>
+        <x>175</x>
+        <y>360</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Location</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="currentlyOpen_locationPathTxtBox">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>380</y>
+        <width>305</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="currentlyOpen_exploreBtn">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>380</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Explore...</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="takeSnapBtn">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>308</y>
+        <width>150</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Take Snapshot</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="recPBBtn">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>330</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Rec Playblast</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="currentlyOpen_viewPBBtn">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>330</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>View Playblast</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="clearCommentBtn">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>330</y>
+        <width>95</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Clear</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saveCommentBtn">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>285</x>
+        <y>330</y>
+        <width>95</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Save</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="assetBrowserTab">
+     <attribute name="title">
+      <string>Asset Browser</string>
+     </attribute>
+     <widget class="Line" name="assetBrowserTopLine">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>5</y>
+        <width>390</width>
+        <height>3</height>
+       </rect>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="midLineWidth">
+       <number>0</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="assetBrowserLabel">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>10</y>
+        <width>95</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>ASSET BROWSER</string>
+      </property>
+     </widget>
+     <widget class="Line" name="assetBrowserUnderLine">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>25</y>
+        <width>390</width>
+        <height>3</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="assetTypesLabel">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>30</y>
+        <width>60</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Asset Types</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="assetBrowser_assetsLabel">
+      <property name="geometry">
+       <rect>
+        <x>133</x>
+        <y>30</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Assets</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="assetBrowser_componentsLabel">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>30</y>
+        <width>65</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Components</string>
+      </property>
+     </widget>
+     <widget class="QScrollArea" name="assetBrowser_assetTypesScrollList">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>50</y>
+        <width>123</width>
+        <height>110</height>
+       </rect>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>119</width>
+         <height>106</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QScrollArea" name="assetBrowser_componentsScrollList">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>70</y>
+        <width>123</width>
+        <height>90</height>
+       </rect>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_4">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>119</width>
+         <height>86</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QScrollArea" name="assetBrowser_assetScrollList">
+      <property name="geometry">
+       <rect>
+        <x>133</x>
+        <y>70</y>
+        <width>123</width>
+        <height>90</height>
+       </rect>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_5">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>119</width>
+         <height>86</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="assetBrowser_assetsActionsBtn">
+      <property name="geometry">
+       <rect>
+        <x>133</x>
+        <y>45</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ACTIONS...</string>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="assetBrowser_componentsActionsBtn">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>45</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ACTIONS...</string>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="assetBrowser_assetTypesNewBtn">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>160</y>
+        <width>60</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(126, 255, 148);</string>
+      </property>
+      <property name="text">
+       <string>New...</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="assetBrowser_assetTypesDelBtn">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>68</x>
+        <y>160</y>
+        <width>60</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 56, 56);</string>
+      </property>
+      <property name="text">
+       <string>Delete</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="assetBrowser_assetsDelBtn">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>195</x>
+        <y>160</y>
+        <width>60</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 56, 56);</string>
+      </property>
+      <property name="text">
+       <string>Delete</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="assetBrowser_assetsNewBtn">
+      <property name="geometry">
+       <rect>
+        <x>133</x>
+        <y>160</y>
+        <width>60</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(126, 255, 148);</string>
+      </property>
+      <property name="text">
+       <string>New...</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="assetBrowser_componentsDelBtn">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>323</x>
+        <y>160</y>
+        <width>60</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 56, 56);</string>
+      </property>
+      <property name="text">
+       <string>Delete</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="assetBrowser_componentsNewBtn">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>160</y>
+        <width>60</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(126, 255, 148);</string>
+      </property>
+      <property name="text">
+       <string>New...</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="assetBrowser_assetsRenameBtn">
+      <property name="geometry">
+       <rect>
+        <x>133</x>
+        <y>185</y>
+        <width>123</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(126, 255, 148);</string>
+      </property>
+      <property name="text">
+       <string>Rename...</string>
+      </property>
+     </widget>
+     <widget class="QScrollArea" name="assetBrowser_historyScrollList">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>225</y>
+        <width>210</width>
+        <height>65</height>
+       </rect>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_12">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>206</width>
+         <height>61</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLineEdit" name="assetBrowser_locationPathTxtBox">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>380</y>
+        <width>305</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="assetBrowser_exploreBtn">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>380</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Explore...</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="assetBrowser_previewFrame">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>225</y>
+        <width>150</width>
+        <height>104</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="assetBrowser_viewPBBtn">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>328</y>
+        <width>150</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>View Playblast</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="assetBrowser_locationLabel">
+      <property name="geometry">
+       <rect>
+        <x>175</x>
+        <y>360</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Location</string>
+      </property>
+     </widget>
+     <widget class="QScrollArea" name="assetBrowser_notesScrollList">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>305</y>
+        <width>210</width>
+        <height>55</height>
+       </rect>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_13">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>206</width>
+         <height>51</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="assetBrowser_notesLabel">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>290</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Notes</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="assetBrowser_historyLabel">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>210</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>History</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="assetBrowser_previewLabel">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>210</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Preview</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="shotBrowserTab">
+     <attribute name="title">
+      <string>Shot Browser</string>
+     </attribute>
+     <widget class="Line" name="shotBrowser_topLine">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>5</y>
+        <width>390</width>
+        <height>3</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="shotBrowser_BottomLine">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>25</y>
+        <width>390</width>
+        <height>3</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="shotBrowserLabel">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>10</y>
+        <width>95</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Shot Browser</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="sequenceLabel">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>30</y>
+        <width>60</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sequence</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="shotLabel">
+      <property name="geometry">
+       <rect>
+        <x>133</x>
+        <y>30</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Shot</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="shotBrowser_componentsLabel">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>30</y>
+        <width>65</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Components</string>
+      </property>
+     </widget>
+     <widget class="QScrollArea" name="shotBrowser_seqScrollList">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>50</y>
+        <width>123</width>
+        <height>110</height>
+       </rect>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_14">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>119</width>
+         <height>106</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QScrollArea" name="shotBrowser_shotScrollList">
+      <property name="geometry">
+       <rect>
+        <x>133</x>
+        <y>70</y>
+        <width>123</width>
+        <height>90</height>
+       </rect>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_15">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>119</width>
+         <height>86</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QScrollArea" name="shotBrowser_componentsScrollList">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>70</y>
+        <width>123</width>
+        <height>90</height>
+       </rect>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_16">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>119</width>
+         <height>86</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="shotBrowser_shotActionsBtn">
+      <property name="geometry">
+       <rect>
+        <x>133</x>
+        <y>45</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ACTIONS...</string>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="shotBrowser_componentsActionsBtn">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>45</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ACTIONS...</string>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="shotBrowser_seqNewBtn">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>160</y>
+        <width>60</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(126, 255, 148);</string>
+      </property>
+      <property name="text">
+       <string>New...</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="shotBrowser_seqDelBtn">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>68</x>
+        <y>160</y>
+        <width>60</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 56, 56);</string>
+      </property>
+      <property name="text">
+       <string>Delete</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="shotBrowser_componentsDelBtn">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>323</x>
+        <y>160</y>
+        <width>60</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 56, 56);</string>
+      </property>
+      <property name="text">
+       <string>Delete</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="shotBrowser_shotNewBtn">
+      <property name="geometry">
+       <rect>
+        <x>133</x>
+        <y>160</y>
+        <width>60</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(126, 255, 148);</string>
+      </property>
+      <property name="text">
+       <string>New...</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="shotBrowser_shotDelBtn">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>195</x>
+        <y>160</y>
+        <width>60</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 56, 56);</string>
+      </property>
+      <property name="text">
+       <string>Delete</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="shotBrowser_componentsNewBtn">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>160</y>
+        <width>60</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(126, 255, 148);</string>
+      </property>
+      <property name="text">
+       <string>New...</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="shotBrowser_locationLabel">
+      <property name="geometry">
+       <rect>
+        <x>175</x>
+        <y>360</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Location</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="shotBrowser_locationPathTextBox">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>380</y>
+        <width>305</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="shotBrowser_exploreBtn">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>380</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Explore...</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="shotBrowser_historyLabel">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>210</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>History</string>
+      </property>
+     </widget>
+     <widget class="QScrollArea" name="shotBrowser_historyScrollList">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>225</y>
+        <width>210</width>
+        <height>65</height>
+       </rect>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_17">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>206</width>
+         <height>61</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="shotBrowser_notesLabel">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>290</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Notes</string>
+      </property>
+     </widget>
+     <widget class="QScrollArea" name="shotBrowser_notesScrollList">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>305</y>
+        <width>210</width>
+        <height>55</height>
+       </rect>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_18">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>206</width>
+         <height>51</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="shotBrowser_viewPBBtn">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>328</y>
+        <width>150</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>View Playblast</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="shotBrowser_previewFrame">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>225</y>
+        <width>150</width>
+        <height>104</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="shotBrowser_previewLabel">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>210</y>
+        <width>46</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Preview</string>
+      </property>
+     </widget>
+     <zorder>shotBrowser_previewFrame</zorder>
+     <zorder>shotBrowser_topLine</zorder>
+     <zorder>shotBrowser_BottomLine</zorder>
+     <zorder>shotBrowserLabel</zorder>
+     <zorder>sequenceLabel</zorder>
+     <zorder>shotLabel</zorder>
+     <zorder>shotBrowser_componentsLabel</zorder>
+     <zorder>shotBrowser_seqScrollList</zorder>
+     <zorder>shotBrowser_shotScrollList</zorder>
+     <zorder>shotBrowser_componentsScrollList</zorder>
+     <zorder>shotBrowser_shotActionsBtn</zorder>
+     <zorder>shotBrowser_componentsActionsBtn</zorder>
+     <zorder>shotBrowser_seqNewBtn</zorder>
+     <zorder>shotBrowser_seqDelBtn</zorder>
+     <zorder>shotBrowser_componentsDelBtn</zorder>
+     <zorder>shotBrowser_shotNewBtn</zorder>
+     <zorder>shotBrowser_shotDelBtn</zorder>
+     <zorder>shotBrowser_componentsNewBtn</zorder>
+     <zorder>shotBrowser_locationLabel</zorder>
+     <zorder>shotBrowser_locationPathTextBox</zorder>
+     <zorder>shotBrowser_exploreBtn</zorder>
+     <zorder>shotBrowser_historyLabel</zorder>
+     <zorder>shotBrowser_historyScrollList</zorder>
+     <zorder>shotBrowser_notesLabel</zorder>
+     <zorder>shotBrowser_notesScrollList</zorder>
+     <zorder>shotBrowser_previewLabel</zorder>
+     <zorder>shotBrowser_viewPBBtn</zorder>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="refreshUIBtn">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>605</y>
+      <width>190</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Refresh UI</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="closeUIBtn">
+    <property name="geometry">
+     <rect>
+      <x>205</x>
+      <y>605</y>
+      <width>190</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Close</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionSave_Workshop"/>
+    <addaction name="actionSave_Master"/>
+   </widget>
+   <widget class="QMenu" name="menuMaya_Tools">
+    <property name="title">
+     <string>Maya Tools</string>
+    </property>
+    <addaction name="actionReference_Editor"/>
+    <addaction name="actionProject_Window"/>
+    <addaction name="actionSet_Project"/>
+    <addaction name="separator"/>
+    <addaction name="actionNamespace_Editor"/>
+    <addaction name="actionHypershade"/>
+    <addaction name="actionOutliner"/>
+    <addaction name="separator"/>
+    <addaction name="actionNormals_Toggle"/>
+   </widget>
+   <widget class="QMenu" name="menuAdd_Ons">
+    <property name="title">
+     <string>Add-Ons</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuPreferences">
+    <property name="title">
+     <string>Preferences</string>
+    </property>
+    <widget class="QMenu" name="menuHigh_Quality_Playblast">
+     <property name="title">
+      <string>High Quality Playblast</string>
+     </property>
+     <addaction name="actionOn"/>
+     <addaction name="actionOff"/>
+    </widget>
+    <addaction name="menuHigh_Quality_Playblast"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionDocumentation"/>
+    <addaction name="actionAbout_Zoobe"/>
+    <addaction name="actionAbout_Zoobe_Project_Manager"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionRevive_File"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuMaya_Tools"/>
+   <addaction name="menuAdd_Ons"/>
+   <addaction name="menuPreferences"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionNamespace_Editor">
+   <property name="text">
+    <string>Namespace Editor...</string>
+   </property>
+  </action>
+  <action name="actionHypershade">
+   <property name="text">
+    <string>Hypershade...</string>
+   </property>
+  </action>
+  <action name="actionOutliner">
+   <property name="text">
+    <string>Outliner...</string>
+   </property>
+  </action>
+  <action name="actionNormals_Toggle">
+   <property name="text">
+    <string>Normals Toggle</string>
+   </property>
+  </action>
+  <action name="actionReference_Editor">
+   <property name="text">
+    <string>Reference Editor...</string>
+   </property>
+  </action>
+  <action name="actionProject_Window">
+   <property name="text">
+    <string>Project Window...</string>
+   </property>
+  </action>
+  <action name="actionSet_Project">
+   <property name="text">
+    <string>Set Project...</string>
+   </property>
+  </action>
+  <action name="actionSave_File">
+   <property name="text">
+    <string>Save File...</string>
+   </property>
+  </action>
+  <action name="actionSave_Master_File">
+   <property name="text">
+    <string>Save Master File...</string>
+   </property>
+  </action>
+  <action name="actionRevive_File">
+   <property name="text">
+    <string>Revive File...</string>
+   </property>
+  </action>
+  <action name="actionAbout_Zoobe_Project_Manager">
+   <property name="text">
+    <string>About Zoobe Project Manager...</string>
+   </property>
+  </action>
+  <action name="actionDocumentation">
+   <property name="text">
+    <string>Documentation...</string>
+   </property>
+  </action>
+  <action name="actionAbout_Zoobe">
+   <property name="text">
+    <string>About Zoobe...</string>
+   </property>
+  </action>
+  <action name="actionQCheckBox">
+   <property name="text">
+    <string>QCheckBox</string>
+   </property>
+  </action>
+  <action name="actionOn">
+   <property name="text">
+    <string>On</string>
+   </property>
+  </action>
+  <action name="actionOff">
+   <property name="text">
+    <string>Off</string>
+   </property>
+  </action>
+  <action name="actionSave_Workshop">
+   <property name="text">
+    <string>Save Workshop...</string>
+   </property>
+  </action>
+  <action name="actionSave_Master">
+   <property name="text">
+    <string>Save Master...</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
