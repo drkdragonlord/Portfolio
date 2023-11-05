@@ -1,1 +1,3 @@
 The Quimera project was a series of broacasting tools developed for Unreal Engine 4.27 for the purpose of designing a runtime set of tools to be used during virtual production of live concerts. The tool included the ability ot modify a greenscreen stage space based on world dimensions, camera management and manipulation, broadcast feed source, and chorma keyeing control for live events.
+
+Broadcast Depot and its client retains the rights to Quimera and its development, it is shown here as a means to showcase my programming skills on the project.
