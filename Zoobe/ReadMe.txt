@@ -1,0 +1,1 @@
+The zoobe project folder holds various scripts, images, and pipeline tools developed for Zoobe MEssage Entertainment in Germany. The company retains the right for all content and shown here as proof of tasks completed and skills used in the creation of these assets and tools.
